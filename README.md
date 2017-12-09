@@ -73,12 +73,41 @@ Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b>
 <ol type="a">
 <li>After getting Outbound Message XML response by Salesforce, if you want to update a record back into Salesforce then you must select "Send Session ID" checkbox when you create an Outbound Message in Salesforce</li>
 <img src="supportedimages/image11.png" />
+
+<li>The external server will get response of Outbound Message by Salesforce as in below XML format
+
+```
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Body>
+  <notifications xmlns="http://soap.sforce.com/2005/09/outbound">
+   <OrganizationId>00D90000000gNcmEAE</OrganizationId>
+   <ActionId>04k90000000PGrlAAG</ActionId>
+   <SessionId>00D90000000gNcm!ARcAQJ.7aOC5VjE5D1VicpNZqe2PZe9Z7Fq0W4wEvF_xbmqyOs3V4QwJtUsPZ84vaw2dpHcHR5aooybd9C3sbet94cJujlCY</SessionId>
+   <EnterpriseUrl>https://ap1.salesforce.com/services/Soap/c/41.0/00D90000000gNcm</EnterpriseUrl>
+   <PartnerUrl>https://ap1.salesforce.com/services/Soap/u/41.0/00D90000000gNcm</PartnerUrl>
+   <Notification>
+    <Id>04l9000001olR84AAE</Id>
+    <sObject xmlns:sf="urn:sobject.enterprise.soap.sforce.com" xsi:type="sf:Account">
+     <sf:Id>0019000001KwyWtAAJ</sf:Id>
+     <sf:BillingCity>San Francisco</sf:BillingCity>
+     <sf:BillingCountry>United States</sf:BillingCountry>
+     <sf:BillingPostalCode>CA 94105</sf:BillingPostalCode>
+     <sf:BillingStreet>The Landmark @ One Market, Suite 300</sf:BillingStreet>
+     <sf:Name>Salesforce.com Inc.</sf:Name>
+    </sObject>
+   </Notification>
+  </notifications>
+ </soapenv:Body>
+</soapenv:Envelope>
+```
+
+</li>
 <li>
 The external server must send acknowledgement response to Salesforce that the message has been received successfully. The response XML format must be as below: 
-<br/>
 
 ```
 Success / Positive acknowledgement 
+----------------------------------
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
 	<soapenv:Body>
 		<notificationsResponse xmlns="http://soap.sforce.com/2005/09/outbound">
@@ -88,6 +117,7 @@ Success / Positive acknowledgement
 </soapenv:Envelope>
 
 Failure / Negative acknowledgement
+----------------------------------
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
 	<soapenv:Body>
 		<notificationsResponse xmlns="http://soap.sforce.com/2005/09/outbound">
@@ -96,13 +126,15 @@ Failure / Negative acknowledgement
 	</soapenv:Body>
 </soapenv:Envelope>
 ```
-<br/>
 
-If the response / acknowledgement is a failure then you will see errors in the Outbound Message Delivery Status Page.
-Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b>
-You will be getting errors as below:
-"org.xml.sax.SAXParseException: Content is not allowed in prolog."
-"SOAP response was a nack"
+</li>
+<li>If the response / acknowledgement is a failure then you will see errors in the Outbound Message Delivery Status Page.</li>
+<li>Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b></li>
+<li>You will be getting errors as below:</li>
+<ul>
+<li>"org.xml.sax.SAXParseException: Content is not allowed in prolog."</li>
+<li>"SOAP response was a nack"</li>
+</ul>
 </li>
 
 <li>https://help.salesforce.com/articleView?id=workflow_om_considerations.htm&type=0</li>
