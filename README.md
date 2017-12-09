@@ -41,9 +41,11 @@ Here you will find the following details about Salesforce Outbount Message.
 <ol type="a">
 <li>Create an Outbound Message</li>
 Go to = Setup > App Setup > Workflow & Approvals > Outbound Messages
+<img src="supportedimages/image1.png" /> <br/>
+<img src="supportedimages/image2.png" />
 <li>Create a Workflow Rule "or" an Approval Process</li>
 Create a workflow rule "or" an approval process and add an Outbound Message as an action.
-
+<img src="supportedimages/image3.png" />
 </ol>
 
 ## (4) How to test a Salesforce Outbound Message?
