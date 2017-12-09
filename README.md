@@ -5,8 +5,7 @@ Here you will find the following details about Salesforce Outbount Message.
 <li>What is a Salesforce Outbound Message?</li>
 <li>Setup an Endpoint</li>
 <li>How to setup a Salesforce Outbound Message?</li>
-<li>How to test a Salesforce Outbound Message?</li>
-<li>How to Monitor a Salesforce Outbound Message?</li>
+<li>How to Test and Monitor a Salesforce Outbound Message?</li>
 <li>Considerations of Salesforce Outbound Messages</li>
 </ol>
 
@@ -19,7 +18,7 @@ Here you will find the following details about Salesforce Outbount Message.
 <li>It creates response in XML data format.</li>
 <li>It resides under Automation Tool.</li>
 <li>It is part of Workflow Rules and Approval Processes.</li>
-  <li>Salesforce has a special permission <b>"Send Outbound Messages"</b> on Profile and Permission Sets. This permission allows user to send outbound messages to an external Web service API.</li>
+<li>Salesforce has a special permission <b>"Send Outbound Messages"</b> on Profile and Permission Sets. This permission allows user to send outbound messages to an external Web service API.</li>
 </ol>
 
 ## (2) Setup an Endpoint
@@ -49,19 +48,28 @@ Create a workflow rule "or" an approval process and add an Outbound Message as a
 <img src="supportedimages/image3.png" />
 </ol>
 
-## (4) How to test a Salesforce Outbound Message?
+## (4) How to Test and Monitor a Salesforce Outbound Message?
 <ol type="a">
 <li>Here in this example, an Account record has been used to test the Outbound Message</li>
-<li><img src="supportedimages/image5.png" /></li>
-</ol>
-
-## (5) How to Monitor a Salesforce Outbound Message?
-<ol type="a">
-<li>Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b></li>
 <li><img src="supportedimages/image4.png" /></li>
+<li>Go to the URL from the <b>"Integration Playground"</b>
+<li><img src="supportedimages/image5.png" /></li>
+<li><b>Salesforce has Acknowledged (Positive Response)</b></li>
+<li><img src="supportedimages/image6.png" /></li>
+<li>Check the Outbound Message Delivery Status <br/>
+Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b>
+</li>
+<li><img src="supportedimages/image7.png" /></li>
+<li><b>Salesforce has NOT Acknowledged (Negative Response)</b></li>
+<li><img src="supportedimages/image8.png" /></li>
+<li>Check the Outbound Message Delivery Status <br/>
+Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b>
+</li>
+<li><img src="supportedimages/image9.png" /></li>
+<li><img src="supportedimages/image10.png" /></li>
 </ol>
 
-## (6) Considerations of Salesforce Outbound Messages
+## (5) Considerations of Salesforce Outbound Messages
 <ol type="a">
 <li>https://help.salesforce.com/articleView?id=workflow_om_considerations.htm&type=0</li>
 <li><img src="supportedimages/Considerations.png" /></li>
