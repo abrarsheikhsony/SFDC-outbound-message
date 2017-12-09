@@ -7,6 +7,7 @@ Here you will find the following details about Salesforce Outbount Message.
 <li>How to setup a Salesforce Outbound Message?</li>
 <li>How to test a Salesforce Outbound Message?</li>
 <li>How to Monitor a Salesforce Outbound Message?</li>
+<li>Considerations of Salesforce Outbound Messages</li>
 </ol>
 
 ## (1) What is a Salesforce Outbound Message?
@@ -58,4 +59,10 @@ Create a workflow rule "or" an approval process and add an Outbound Message as a
 <ol type="a">
 <li>Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b></li>
 <li><img src="supportedimages/image4.png" /></li>
+</ol>
+
+## (6) Considerations of Salesforce Outbound Messages
+<ol type="a">
+<li>https://help.salesforce.com/articleView?id=workflow_om_considerations.htm&type=0</li>
+<li><img src="supportedimages/Considerations.png" /></li>
 </ol>
