@@ -18,6 +18,7 @@ Here you will find the following details about Salesforce Outbount Message.
 <li>It creates response in XML data format.</li>
 <li>It resides under Automation Tool.</li>
 <li>It is part of Workflow Rules and Approval Processes.</li>
+<li>Salesforce has a special permission "Send Outbound Messages" on Profile and Permission Sets. This permission allows user to send outbound messages to an external Web service API.</li>
 </ol>
 
 ## (2) Setup an Endpoint
@@ -25,12 +26,15 @@ Here you will find the following details about Salesforce Outbount Message.
 <li>You can create a Listener in any programming language (e.g. Java, .Net, PHP etc.). In other words you setup an endpoint where the Salesforce Outbound Message will send the message in XML.</li>
 <li>For Testing purpose you can use following publicly available services. Most of them are free!</li>
 <ul>
-  <li>
-    asdf
-  <li>  
+<li>Integration Playground by Salesforce (http://intg-playground.herokuapp.com/sfdc/omlistener)<li>
+<li>PutsReq (http://putsreq.com/)<li>
+<li>RequestBin (https://requestb.in/)<li>
+<li>PostBin (http://postb.in/)<li>
+<li>SOAP UI (On-Premise, Need to download the software to use it.)<li>
+<li>Burp Suite (https://security.secure.force.com/security/tools/webapp/burpabout)<li>
+<li>Runscope (https://www.runscope.com/)<li>
 </ul>
 </ol>
-
 
 ## (3) How to setup a Salesforce Outbound Message?
 <ol type="a">
