@@ -3,28 +3,45 @@
 Here you will find the following details about Salesforce Outbount Message.
 <ol type="1">
 <li>What is a Salesforce Outbound Message?</li>
+<li>Setup an Endpoint</li>
 <li>How to setup a Salesforce Outbound Message?</li>
 <li>How to test a Salesforce Outbound Message?</li>
-<li>Considerations of a Salesforce Outbound Message?</li>
+<li>Considerations of a Salesforce Outbound Message</li>
 </ol>
 
 ## (1) What is a Salesforce Outbound Message?
 <ol type="a">
 <li>Salesforce outbound message allows you to specify fields that changes within Salesforce and send those fields to a designated external endpoint/server without writing a single line of code.</li>
 <li>It is a declarative (point and click) feature and does not need any programmatic skills.</li>
+<li>It uses Asynchronous communication.</li>
+<li>It uses SOAP(WSDL) protocol.</li>
+<li>It creates response in XML data format.</li>
 <li>It resides under Automation Tool.</li>
 <li>It is part of Workflow Rules and Approval Processes.</li>
 </ol>
 
-## (2) How to setup a Salesforce Outbound Message?
+## (2) Setup an Endpoint
+<ol type="a">
+<li>You can create a Listener in any programming language (e.g. Java, .Net, PHP etc.). In other words you setup an endpoint where the Salesforce Outbound Message will send the message in XML.</li>
+<li>For Testing purpose you can use following publicly available services. Most of them are free!</li>
+<ul>
+  <li>
+    asdf
+  <li>  
+</ul>
+</ol>
+
+
+## (3) How to setup a Salesforce Outbound Message?
 <ol type="a">
 <li>Create an Outbound Message</li>
 Go to = Setup > App Setup > Workflow & Approvals > Outbound Messages
-  
-<li></li>
+<li>Create a Workflow Rule "or" an Approval Process</li>
+Create a workflow rule "or" an approval process and add an Outbound Message as an action.
+
 </ol>
 
-## (3) How to test a Salesforce Outbound Message?
+## (4) How to test a Salesforce Outbound Message?
 
 
-## (4) Considerations of a Salesforce Outbound Message?
+## (5) Considerations of a Salesforce Outbound Message?
