@@ -17,6 +17,12 @@ Here you will find the following details about Salesforce Outbount Message.
 </ol>
 
 ## (2) How to setup a Salesforce Outbound Message?
+<ol type="a">
+<li>Create an Outbound Message</li>
+Go to = Setup > App Setup > Workflow & Approvals > Outbound Messages
+  
+<li></li>
+</ol>
 
 ## (3) How to test a Salesforce Outbound Message?
 
