@@ -18,13 +18,13 @@ Here you will find the following details about Salesforce Outbount Message.
 <li>It creates response in XML data format.</li>
 <li>It resides under Automation Tool.</li>
 <li>It is part of Workflow Rules and Approval Processes.</li>
-<li>Salesforce has a special permission "Send Outbound Messages" on Profile and Permission Sets. This permission allows user to send outbound messages to an external Web service API.</li>
+  <li>Salesforce has a special permission <b>"Send Outbound Messages"</b> on Profile and Permission Sets. This permission allows user to send outbound messages to an external Web service API.</li>
 </ol>
 
 ## (2) Setup an Endpoint
 <ol type="a">
 <li>You can create a Listener in any programming language (e.g. Java, .Net, PHP etc.). In other words you setup an endpoint where the Salesforce Outbound Message will send the message in XML.</li>
-<li>For Testing purpose you can use following publicly available services. Most of them are free!
+<li>For Testing purpose you can use following publicly available services. Most of them are free! In this example <b>"Integration Playground by Salesforce"</b> has been used for testing the outbound message.
 <ul>
 <li>Integration Playground by Salesforce (http://intg-playground.herokuapp.com/sfdc/omlistener)</li>
 <li>PutsReq (http://putsreq.com/)</li>
@@ -40,7 +40,7 @@ Here you will find the following details about Salesforce Outbount Message.
 ## (3) How to setup a Salesforce Outbound Message?
 <ol type="a">
 <li>Create an Outbound Message</li>
-Go to = Setup > App Setup > Workflow & Approvals > Outbound Messages
+Go to = <b>Setup > App Setup > Workflow & Approvals > Outbound Messages</b>
 <img src="supportedimages/image1.png" /> <br/>
 <img src="supportedimages/image2.png" />
 <li>Create a Workflow Rule "or" an Approval Process</li>
@@ -56,6 +56,6 @@ Create a workflow rule "or" an approval process and add an Outbound Message as a
 
 ## (5) How to Monitor a Salesforce Outbound Message?
 <ol type="a">
-<li>Go to = Setup > Administration Setup > Monitoring > Outbound Messages</li>
+<li>Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b></li>
 <li><img src="supportedimages/image4.png" /></li>
 </ol>
