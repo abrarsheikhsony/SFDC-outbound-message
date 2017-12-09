@@ -24,7 +24,8 @@ Here you will find the following details about Salesforce Outbount Message.
 ## (2) Setup an Endpoint
 <ol type="a">
 <li>You can create a Listener in any programming language (e.g. Java, .Net, PHP etc.). In other words you setup an endpoint where the Salesforce Outbound Message will send the message in XML.</li>
-<li>For Testing purpose you can use following publicly available services. Most of them are free!</li>
+<li>For Testing purpose you can use following publicly available services. Most of them are free!
+<ul>
 <li>Integration Playground by Salesforce (http://intg-playground.herokuapp.com/sfdc/omlistener)</li>
 <li>PutsReq (http://putsreq.com/)</li>
 <li>RequestBin (https://requestb.in/)</li>
@@ -32,6 +33,8 @@ Here you will find the following details about Salesforce Outbount Message.
 <li>SOAP UI (On-Premise, Need to download the software to use it.)</li>
 <li>Burp Suite (https://security.secure.force.com/security/tools/webapp/burpabout)</li>
 <li>Runscope (https://www.runscope.com/)</li>
+</ul>
+</li>
 </ol>
 
 ## (3) How to setup a Salesforce Outbound Message?
