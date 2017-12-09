@@ -7,6 +7,7 @@ Here you will find the following details about Salesforce Outbount Message.
 <li>How to setup a Salesforce Outbound Message?</li>
 <li>How to Test and Monitor a Salesforce Outbound Message?</li>
 <li>Considerations of Salesforce Outbound Messages</li>
+<li>Useful Resources</li>
 </ol>
 
 ## (1) What is a Salesforce Outbound Message?
@@ -139,4 +140,14 @@ Failure / Negative acknowledgement
 
 <li>https://help.salesforce.com/articleView?id=workflow_om_considerations.htm&type=0</li>
 <li><img src="supportedimages/image12.png" /></li>
+</ol>
+
+## (6) Useful Resources
+<ol type="a">
+<li>https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_om_outboundmessaging.htm</li>
+<li>http://developer.force.com/cookbook/recipe/sending-outbound-messages-with-workflow</li>
+<li>https://developer.salesforce.com/page/Outbound_Messaging</li>
+<li>https://help.salesforce.com/articleView?id=workflow_om_considerations.htm&type=0</li>
+<li>http://www.tgerm.com/2014/08/testing-soap-outbound-messages-without-failures-saxexception.html</li>
+<li>http://www.simplysfdc.com/2016/04/testing-outbound-message-in-salesforce.html</li>
 </ol>
