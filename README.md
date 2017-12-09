@@ -54,13 +54,13 @@ Create a workflow rule "or" an approval process and add an Outbound Message as a
 <li><img src="supportedimages/image4.png" /></li>
 <li>Go to the URL from the <b>"Integration Playground"</b>
 <li><img src="supportedimages/image5.png" /></li>
-<li><b>Salesforce has Acknowledged (Positive Response)</b></li>
+<li><b>Salesforce has got Acknowledgement (Positive Response)</b></li>
 <li><img src="supportedimages/image6.png" /></li>
 <li>Check the Outbound Message Delivery Status <br/>
 Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b>
 </li>
 <li><img src="supportedimages/image7.png" /></li>
-<li><b>Salesforce has NOT Acknowledged (Negative Response)</b></li>
+<li><b>Salesforce has NOT Acknowledgement yet (Negative Response)</b></li>
 <li><img src="supportedimages/image8.png" /></li>
 <li>Check the Outbound Message Delivery Status <br/>
 Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b>
@@ -71,6 +71,40 @@ Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b>
 
 ## (5) Considerations of Salesforce Outbound Messages
 <ol type="a">
+<li>After getting Outbound Message XML response by Salesforce, if you want to update a record back into Salesforce then you must select "Send Session ID" checkbox when you create an Outbound Message in Salesforce</li>
+<img src="supportedimages/image11.png" />
+<li>
+The external server must send acknowledgement response to Salesforce that the message has been received successfully. The response XML format must be as below: 
+<br/>
+
+```
+Success / Positive acknowledgement 
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Body>
+		<notificationsResponse xmlns="http://soap.sforce.com/2005/09/outbound">
+			<Ack>true</Ack>
+		</notificationsResponse>
+	</soapenv:Body>
+</soapenv:Envelope>
+
+Failure / Negative acknowledgement
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Body>
+		<notificationsResponse xmlns="http://soap.sforce.com/2005/09/outbound">
+			<Ack>true</Ack>
+		</notificationsResponse>
+	</soapenv:Body>
+</soapenv:Envelope>
+```
+<br/>
+
+If the response / acknowledgement is a failure then you will see errors in the Outbound Message Delivery Status Page.
+Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b>
+You will be getting errors as below:
+"org.xml.sax.SAXParseException: Content is not allowed in prolog."
+"SOAP response was a nack"
+</li>
+
 <li>https://help.salesforce.com/articleView?id=workflow_om_considerations.htm&type=0</li>
-<li><img src="supportedimages/Considerations.png" /></li>
+<li><img src="supportedimages/image12.png" /></li>
 </ol>
