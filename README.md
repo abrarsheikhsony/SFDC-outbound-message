@@ -72,7 +72,7 @@ Go to = <b> Setup > Administration Setup > Monitoring > Outbound Messages </b>
 
 ## (5) Considerations of Salesforce Outbound Messages
 <ol type="a">
-<li>After getting Outbound Message XML response by Salesforce, if you want to update a record back into Salesforce then you must select "Send Session ID" checkbox when you create an Outbound Message in Salesforce</li>
+<li>After getting Outbound Message XML response by Salesforce, if you want to update a record back into Salesforce then you must select <b>"Send Session ID"</b> checkbox when you create an Outbound Message in Salesforce</li>
 <img src="supportedimages/image11.png" />
 
 <li>The external server will get response of Outbound Message by Salesforce as in below XML format
@@ -122,7 +122,7 @@ Failure / Negative acknowledgement
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
 	<soapenv:Body>
 		<notificationsResponse xmlns="http://soap.sforce.com/2005/09/outbound">
-			<Ack>true</Ack>
+			<Ack>false</Ack>
 		</notificationsResponse>
 	</soapenv:Body>
 </soapenv:Envelope>
